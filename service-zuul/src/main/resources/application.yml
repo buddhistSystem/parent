@@ -1,0 +1,27 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8081/eureka/
+server:
+  port: 8087
+spring:
+  application:
+    name: service-zuul
+  security:
+    user:
+      name: liqian
+      password: 123456
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+

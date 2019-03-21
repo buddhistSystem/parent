@@ -1,0 +1,28 @@
+server:
+  port: 8081
+eureka:
+    instance:
+        perferIpAddress: true
+        hostname: server1
+    #在默认情况下erureka server也是一个eureka client ,必须要指定一个 server
+    client:
+        #表示是否将自己注册到Eureka Server，默认为true。单点的EurekaServer不需要在其他注册中心注册，就设为false，高可用的EurekaServer就设置为true
+        registerWithEureka: true
+        #表示是否从Eureka Server获取注册信息，默认为true。如果是一个单点的Eureka Server，不需要同步其他的Eureka Server节点的数据，就设为false。
+        fetchRegistry: true
+        serviceUrl:
+            # server1 向 server2 注册
+            defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@server2:8082/eureka/
+
+#注册中心安全配置,需要在Eureka-server添加依赖，服务端也需要添加
+spring:
+  profiles: server1
+  application:
+    name: server1
+
+  security:
+    user:
+      name: liqian  # 用户名
+      password: 123456 # 用户密码
+
+

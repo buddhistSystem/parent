@@ -1,0 +1,19 @@
+
+# service-ribbon
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8081/eureka/
+server:
+  port: 8086
+spring:
+  application:
+    name: service-ribbon
+  security:
+    user:
+      name: liqian
+      password: 123456
+
+

@@ -1,0 +1,7 @@
+spring:
+  #控制启动的是哪一个server
+  profiles:
+    active: server2
+
+
+

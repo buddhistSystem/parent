@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-03-21T07:01:52.343+0000",
+  "status": 403,
+  "error": "Forbidden",
+  "message": "Forbidden",
+  "path": "/survey/list"
+}

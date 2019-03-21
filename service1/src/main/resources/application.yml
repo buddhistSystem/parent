@@ -1,0 +1,25 @@
+server:
+  port: 8084
+
+
+spring:
+  application:
+    name: service-provider
+
+  security:
+    user:
+      name: liqian
+      password: 123456
+
+# service服务提供者
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      #在地址里加上用户名密码，然后运行还是报错，是因为新版本的security默认开启csrf,需要写一个配置类关掉
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:8081/eureka/
+
+
