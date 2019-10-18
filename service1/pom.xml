@@ -42,12 +42,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--支付宝支付依赖-->
-        <dependency>
-            <groupId>com.alipay</groupId>
-            <artifactId>sdk-java</artifactId>
-            <version>20170324180803</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
