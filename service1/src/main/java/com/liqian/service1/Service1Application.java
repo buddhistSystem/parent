@@ -22,8 +22,9 @@ public class Service1Application{
 
     @RequestMapping("/hi")
     public String sayHello() {
-        return "hello springCloud--------"+port+"支付宝支付成功后就要跳到该页面";
+        return "hello springCloud--------"+port;
     }
+
 
 
 

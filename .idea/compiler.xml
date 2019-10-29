@@ -20,6 +20,7 @@
       <module name="config-server" target="1.8" />
       <module name="config-server-bus-amqp" target="1.8" />
       <module name="configclient" target="1.8" />
+      <module name="demo" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="service-feign" target="1.8" />
@@ -28,6 +29,7 @@
       <module name="service1" target="1.8" />
       <module name="service2" target="1.8" />
       <module name="survey" target="1.8" />
+      <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
